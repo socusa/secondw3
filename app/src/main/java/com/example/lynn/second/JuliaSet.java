@@ -46,7 +46,7 @@ public class JuliaSet implements Runnable {
     public int[] colors() {
         int[] colors = new int[17];
 
-        colors[0] = 0xFF000000;
+        colors[0] = 0xFFFFFFFF;
         colors[1] = 0xFF6E00FF;
         colors[2] = 0xFF7800F0;
         colors[3] = 0xFF8200E6;
