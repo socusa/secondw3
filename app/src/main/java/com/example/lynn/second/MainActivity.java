@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     public static Bitmap bitmap;
     public static int width;
     public static int height;
+    public static JuliaSetView juliaSetView;
 
     public static String getWord() {
         java.util.List<String> words = new ArrayList<>();

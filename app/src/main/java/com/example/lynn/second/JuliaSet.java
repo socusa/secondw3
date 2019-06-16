@@ -173,7 +173,7 @@ public class JuliaSet implements Runnable {
 
                 @Override
                 public void run() {
-                    myView.invalidate();
+                    juliaSetView.invalidate();
                 }
             });
 

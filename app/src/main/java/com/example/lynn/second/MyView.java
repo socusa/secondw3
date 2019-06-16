@@ -17,7 +17,7 @@ public class MyView extends LinearLayout {
         width = sizeOfScreen.x;
         height = sizeOfScreen.y;
 
-        JuliaSetView juliaSetView = new JuliaSetView(context);
+        juliaSetView = new JuliaSetView(context);
 
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(width,3*height/4);
 
