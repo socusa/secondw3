@@ -157,7 +157,7 @@ public class JuliaSet implements Runnable {
         while (keepGoing) {
             pause(5);
 
-            int width = Math.min(MainActivity.width,height);
+            int width = Math.min(MainActivity.width,3*height/4);
 
             int[] pixels = getMap(cReal + counter*0.001,cImaginary - counter*0.001,width,colors());
 
