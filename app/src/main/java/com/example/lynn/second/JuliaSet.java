@@ -8,8 +8,14 @@ import static com.example.lynn.second.MainActivity.*;
 public class JuliaSet implements Runnable {
     private Thread thread;
     private boolean keepGoing;
+    private double cReal;
+    private double cImaginary;
 
     public JuliaSet() {
+        cReal = 0;
+
+        cImaginary = -0.5;
+
         thread = new Thread(this);
 
         keepGoing = true;
@@ -146,12 +152,16 @@ public class JuliaSet implements Runnable {
 
     @Override
     public void run() {
+        int counter = 0;
+
         while (keepGoing) {
             pause(5);
 
             int width = Math.min(MainActivity.width,height);
 
-            int[] pixels = getMap(0,-0.5,width,colors());
+            int[] pixels = getMap(cReal + counter*0.001,cImaginary - counter*0.001,width,colors());
+
+            counter++;
 
  //           int[] pixels = getMap(0,-0.5,400,400,colors());
 
