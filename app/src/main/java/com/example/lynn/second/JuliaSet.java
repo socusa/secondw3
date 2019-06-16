@@ -67,7 +67,7 @@ public class JuliaSet implements Runnable {
 
         for (int counter=0;counter<width;counter++) {
             for (int counter1=1;counter1<width;counter1++) {
-                output[counter1*width + counter] = 0xFFFFFFFF;
+                output[counter1*width + counter] = colors[0];
             }
         }
 

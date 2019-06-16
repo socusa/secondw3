@@ -17,13 +17,17 @@ public class MyView extends LinearLayout {
         width = sizeOfScreen.x;
         height = sizeOfScreen.y;
 
-        setWillNotDraw(false);
+        JuliaSetView juliaSetView = new JuliaSetView(context);
+
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(width,3*height/4);
+
+        layoutParams.topMargin = height/4;
+
+        juliaSetView.setLayoutParams(layoutParams);
+
+        addView(juliaSetView);
     }
 
 
-    public void onDraw(Canvas canvas) {
-        if (bitmap != null)
-            canvas.drawBitmap(bitmap,0,0,null);
-    }
 
 }
