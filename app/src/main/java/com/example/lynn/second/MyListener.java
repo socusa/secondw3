@@ -10,8 +10,8 @@ public class MyListener implements View.OnClickListener {
 
     public ObjectAnimator animation(View view,
                                     String property,
-                                    int... values) {
-        ObjectAnimator animation = ObjectAnimator.ofInt(view,property,values);
+                                    float... values) {
+        ObjectAnimator animation = ObjectAnimator.ofFloat(view,property,values);
 
         return(animation);
     }
