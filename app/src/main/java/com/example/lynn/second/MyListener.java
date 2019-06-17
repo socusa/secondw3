@@ -24,7 +24,7 @@ public class MyListener implements View.OnClickListener {
 
         AnimatorSet set = new AnimatorSet();
 
-        ObjectAnimator animation1 = animation(buttons[0],"scaleX",1,2,1);
+        ObjectAnimator animation1 = animation(buttons[0],"scaleX",min,max,min);
 
         set.play(animation1);
 
