@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     public static Bitmap bitmap;
     public static int width;
     public static int height;
-    public static JuliaSetView juliaSetView;
+    public static ChangeColors changeColors;
 
     public static String getWord() {
         java.util.List<String> words = new ArrayList<>();
@@ -46,8 +46,17 @@ public class MainActivity extends AppCompatActivity {
 
         database = helper.getReadableDatabase();
 
-        new JuliaSet();
+        changeColors = new ChangeColors();
 
         setContentView(myView = new MyView(this));
     }
+
+    protected void onDestroy() {
+        super.onDestroy();
+
+        if (changeColors != null)
+            changeColors.stop();
+    }
+
+
 }
