@@ -2,10 +2,12 @@ package com.example.lynn.second;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.animation.ValueAnimator;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.widget.Button;
 
 import java.util.ArrayList;
 
@@ -14,10 +16,10 @@ public class MainActivity extends AppCompatActivity {
     public static MyListener listener = new MyListener();
     public static MyDatabaseHelper helper;
     public static SQLiteDatabase database;
-    public static Bitmap bitmap;
     public static int width;
     public static int height;
     public static ChangeColors changeColors;
+    public static Button button;
 
     public static String getWord() {
         java.util.List<String> words = new ArrayList<>();

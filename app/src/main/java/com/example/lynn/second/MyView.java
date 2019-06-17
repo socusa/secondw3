@@ -3,6 +3,7 @@ package com.example.lynn.second;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Point;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 import static com.example.lynn.second.MainActivity.*;
@@ -16,6 +17,12 @@ public class MyView extends LinearLayout {
 
         width = sizeOfScreen.x;
         height = sizeOfScreen.y;
+
+        button = new Button(context);
+
+        button.setOnClickListener(listener);
+
+        addView(button);
 
     }
 
