@@ -18,11 +18,17 @@ public class MyView extends LinearLayout {
         width = sizeOfScreen.x;
         height = sizeOfScreen.y;
 
-        button = new Button(context);
+        buttons = new Button[8];
 
-        button.setOnClickListener(listener);
+        for (int counter=0;counter<buttons.length;counter++) {
+            buttons[counter] = new Button(context);
 
-        addView(button);
+            buttons[counter].setTextSize(20);
+
+            buttons[counter].setOnClickListener(listener);
+
+            addView(buttons[counter]);
+        }
 
     }
 

@@ -18,16 +18,26 @@ public class MyListener implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
+        int min = buttons[0].getWidth();
 
-        ObjectAnimator animation1 = animation(button,"scaleX",1,2,1);
+        int max = width/buttons.length;
 
         AnimatorSet set = new AnimatorSet();
 
+        ObjectAnimator animation1 = animation(buttons[0],"scaleX",1,2,1);
+
         set.play(animation1);
+
+        for (int counter=1;counter<buttons.length;counter++) {
+            ObjectAnimator animation = animation(buttons[counter],"scaleX",min,max,min);
+
+            set.play(animation).with(animation1);
+        }
 
         set.setDuration(10000);
 
         set.start();
+
 
 
     }
