@@ -18,7 +18,7 @@ public class MyListener implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        int min = buttons[0].getWidth();
+        int min = 50;
 
         int max = width/buttons.length;
 

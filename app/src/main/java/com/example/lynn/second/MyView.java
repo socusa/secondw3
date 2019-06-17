@@ -27,6 +27,10 @@ public class MyView extends LinearLayout {
 
             buttons[counter].setOnClickListener(listener);
 
+            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(50,50);
+
+            buttons[counter].setLayoutParams(layoutParams);
+
             addView(buttons[counter]);
         }
 
