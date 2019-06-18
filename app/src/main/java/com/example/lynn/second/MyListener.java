@@ -36,7 +36,7 @@ public class MyListener implements View.OnClickListener {
 
         set.setDuration(10000);
 
-        set.start();
+      //  set.start();
 
 
 

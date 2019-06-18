@@ -18,10 +18,14 @@ public class MyView extends LinearLayout {
         width = sizeOfScreen.x;
         height = sizeOfScreen.y;
 
-        buttons = new Button[8];
+        buttons = new Button[word.length()];
+
+        String scrambled = scramble(word);
 
         for (int counter=0;counter<buttons.length;counter++) {
             buttons[counter] = new Button(context);
+
+            buttons[counter].setText(scrambled.substring(counter,counter+1));
 
             buttons[counter].setTextSize(20);
 
