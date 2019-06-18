@@ -56,6 +56,10 @@ public class MyListener implements View.OnClickListener {
                     ObjectAnimator animation2 = animation(buttons[counter],"translationY",0,height,0,height,0,height,0,height,0);
 
                     set.play(animation2).with(animation1);
+
+                    ObjectAnimator animation3 = animation(buttons[counter],"rotationY",0,height,0,height,0,height,0,height,0);
+
+                    set.play(animation3).with(animation1);
                 }
 
                 set.setDuration(10000);
