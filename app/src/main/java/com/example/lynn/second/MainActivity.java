@@ -23,7 +23,19 @@ public class MainActivity extends AppCompatActivity {
     public static String word;
 
     public static String scramble(String input) {
-        char[]
+        char[] characters = input.toCharArray();
+
+        for(int counter=0;counter<100;counter++) {
+            int position1 = (int)(characters.length*Math.random());
+
+            int position2 = (int)(characters.length*Math.random());
+
+            char temp = characters[position1];
+            characters[position1] = characters[position2];
+            characters[position2] = temp;
+        }
+
+        return(new String(characters));
     }
 
     public static String getWord() {
@@ -54,6 +66,8 @@ public class MainActivity extends AppCompatActivity {
         database = helper.getReadableDatabase();
 
         changeColors = new ChangeColors();
+
+        word = getWord().toUpperCase();
 
         setContentView(myView = new MyView(this));
     }
