@@ -20,6 +20,11 @@ public class MainActivity extends AppCompatActivity {
     public static int height;
     public static ChangeColors changeColors;
     public static Button[] buttons;
+    public static String word;
+
+    public static String scramble(String input) {
+        char[]
+    }
 
     public static String getWord() {
         java.util.List<String> words = new ArrayList<>();
