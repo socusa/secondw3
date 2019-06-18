@@ -37,28 +37,30 @@ public class MyListener implements View.OnClickListener {
             for (Button button : buttons)
                 candidate += button.getText().charAt(0);
 
-            if()
+            if(candidate.equals(word)) {
+                int min = 50;
+
+                int max = width/buttons.length;
+
+                AnimatorSet set = new AnimatorSet();
+
+                ObjectAnimator animation1 = animation(buttons[0],"rotation",min,max,min);
+
+                set.play(animation1);
+
+                for (int counter=1;counter<buttons.length;counter++) {
+                    ObjectAnimator animation = animation(buttons[counter],"rotation",min,max,min);
+
+                    set.play(animation).with(animation1);
+                }
+
+                set.setDuration(10000);
+
+                //  set.start();
+            }
         }
 
-        int min = 50;
 
-        int max = width/buttons.length;
-
-        AnimatorSet set = new AnimatorSet();
-
-        ObjectAnimator animation1 = animation(buttons[0],"rotation",min,max,min);
-
-        set.play(animation1);
-
-        for (int counter=1;counter<buttons.length;counter++) {
-            ObjectAnimator animation = animation(buttons[counter],"rotation",min,max,min);
-
-            set.play(animation).with(animation1);
-        }
-
-        set.setDuration(10000);
-
-      //  set.start();
 
 
 
