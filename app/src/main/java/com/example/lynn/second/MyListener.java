@@ -24,12 +24,12 @@ public class MyListener implements View.OnClickListener {
 
         AnimatorSet set = new AnimatorSet();
 
-        ObjectAnimator animation1 = animation(buttons[0],"scaleX",min,max,min);
+        ObjectAnimator animation1 = animation(buttons[0],"rotation",min,max,min);
 
         set.play(animation1);
 
         for (int counter=1;counter<buttons.length;counter++) {
-            ObjectAnimator animation = animation(buttons[counter],"scaleX",min,max,min);
+            ObjectAnimator animation = animation(buttons[counter],"rotation",min,max,min);
 
             set.play(animation).with(animation1);
         }
