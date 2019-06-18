@@ -70,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
 
         word = getWord().toUpperCase();
 
+        System.out.println("word is " + word);
+
         setContentView(myView = new MyView(this));
     }
 
